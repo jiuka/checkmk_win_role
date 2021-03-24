@@ -1,12 +1,12 @@
-# Checkmk extension for ...
+# Checkmk extension for Windows Server Role discovery
 
-![build](https://github.com/jiuka/checkmk_phion/workflows/build/badge.svg)
-![flake8](https://github.com/jiuka/checkmk_phion/workflows/Lint/badge.svg)
-![pytest](https://github.com/jiuka/checkmk_phion/workflows/pytest/badge.svg)
+![build](https://github.com/jiuka/checkmk_win_role/workflows/build/badge.svg)
+![flake8](https://github.com/jiuka/checkmk_win_role/workflows/Lint/badge.svg)
+![pytest](https://github.com/jiuka/checkmk_win_role/workflows/pytest/badge.svg)
 
 ## Description
 
-This is a template to develop Checkmk Extensions
+This Extension deploys a agent plugin to windows server to discover host lables for the installed server roles.
 
 ## Development
 
