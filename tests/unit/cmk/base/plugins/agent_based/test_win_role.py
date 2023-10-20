@@ -41,4 +41,3 @@ from cmk.base.plugins.agent_based import win_role
 ])
 def test_win_role_host_labels(string_table, result):
     assert list(win_role.win_role_host_labels(string_table)) == result
-
