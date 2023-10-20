@@ -5,21 +5,19 @@
     'files': {
         'agent_based': ['win_role.py'],
         'agents': [
-            'bakery/win_role.py',
             'windows/plugins/win_role.ps1',
         ],
-        'checkman': [],
-        'checks': [],
-        'doc': [],
-        'inventory': [],
-        'notifications': [],
-        'pnp-templates': [],
-        'web': ['plugins/wato/agent_bakery_win_role.py']
+        'gui': [
+            'wato/agent_bakery/win_role.py',
+        ],
+        'lib': [
+            'python3/cmk/base/cee/plugins/bakery/win_role.py',
+        ],
     },
     'name': 'win_role',
     'title': u'Discover Windows Server Roles',
-    'version': '1.0',
-    'version.min_required': '2.0.0',
-    'version.packaged': '2.0.0',
-    'version.usable_until': '2.1.0'
+    'version': '1.0.1',
+    'version.min_required': '2.2.0',
+    'version.packaged': '2.2.0',
+    'version.usable_until': '2.3.0'
 }
