@@ -19,18 +19,25 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-from typing import Dict
+from cmk.agent_based.v2 import (
+    AgentSection,
+    HostLabel,
+    HostLabelGenerator,
+    StringTable,
+)
 
-from .agent_based_api.v1.type_defs import HostLabelGenerator
-from .agent_based_api.v1 import HostLabel, register
+
+def parse_win_role(string_table: StringTable) -> StringTable:
+    return string_table
 
 
-def win_role_host_labels(section: Dict) -> HostLabelGenerator:
+def win_role_host_labels(section: StringTable) -> HostLabelGenerator:
     for role in section:
         yield HostLabel(f'win_role/{role[0]}', u'installed')
 
 
-register.agent_section(
+agent_section_win_role = AgentSection(
     name='win_role',
+    parse_function=parse_win_role,
     host_label_function=win_role_host_labels,
 )
