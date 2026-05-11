@@ -23,7 +23,7 @@ import pytest  # type: ignore[import]
 from cmk.agent_based.v2 import (
     HostLabel
 )
-from cmk.base.plugins.agent_based import win_role
+from cmk_addons.plugins.win_role.agent_based import win_role
 
 
 @pytest.mark.parametrize('string_table, result', [
